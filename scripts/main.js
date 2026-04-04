@@ -3,6 +3,9 @@ Events.on(EventType.WorldLoadEvent, () => {
     Vars.state.rules.teams.get(Team.sharded).blockHealthMultiplier = 0.1;
     Vars.state.rules.teams.get(Team.sharded).buildSpeedMultiplier = 10;
     Vars.state.rules.buildCostMultiplier = 10;
+});
+
+Events.on(ClientLoadEvent, e => {
     Blocks.coreShard.itemCapacity *= 10;
     Blocks.coreFoundation.itemCapacity *= 10;
     Blocks.coreNucleus.itemCapacity *= 10;
